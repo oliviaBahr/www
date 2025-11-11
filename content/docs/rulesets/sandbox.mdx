@@ -5,16 +5,15 @@ description: Experimental ruleset for testing balance changes and new mechanics
 
 ## Overview
 
-The Sandbox ruleset is designed for testing and experimentation with balance changes and new mechanics before they are considered for the Standard ruleset. It serves as a proving ground for card modifications, new interactions, and gameplay adjustments.
+Sandbox tests mechanical changes that reshape how you approach the game. Targeted modifications to underperforming jokers and systemic adjustments that force different strategic choices. Score preview disabled. Three experimental stakes. Every change earned its spot by creating new decision spaces, not just different numbers.
 
 Based on the Standard ruleset, with the following changes:
 
 ## Gameplay Changes
 
-- **Comeback Gold Mechanic:** Changed from $4 per life lost to $3 per completed Ante
-- **The Order:** Re-enabled in the joker pool with modified effect
-- **Score Preview:** Disabled
-- **Justice Tarot Card:** Re-enabled (Glass cards break at 1/3 rate)
+- **Comeback Gold Mechanic:** $3 per completed Ante (was $4 per life lost)
+- **Score Preview:** Disabled - removes calculation paralysis, speeds up play
+- **Glass Cards:** Justice back in Tarot pool, glass cards break at 1/3 rate
 
 ## Modified Jokers
 
@@ -31,26 +30,6 @@ Based on the Standard ruleset, with the following changes:
 		<tbody>
 		<tr>
 			<td>
-				#### Magnet [toc]
-				<JokerCard name={'Magnet'} img={'/cards/j_magnet.png'}/>
-			</td>
-			<td>
-				<div className={'flex flex-col gap-1'}>
-					<span>Disabled in Standard ruleset</span>
-				</div>
-			</td>
-			<td>
-				<div className={'flex flex-col gap-1'}>
-					<span>Re-added to joker pool</span>
-					<span><Hands>Self destructs</Hands> after <Hands>5 turns</Hands></span>
-				</div>
-			</td>
-			<td>
-				Previously removed from the Standard ruleset, now available with a turn limit.
-			</td>
-		</tr>
-		<tr>
-			<td>
 				#### The Order [toc]
 				<JokerCard name={'The Order'} img={'/cards/j_order.png'}/>
 			</td>
@@ -61,7 +40,7 @@ Based on the Standard ruleset, with the following changes:
 				<Xmult>X4</Xmult> Mult if played hand contains a <Hands>Straight</Hands> and <Hands>no face cards</Hands>
 			</td>
 			<td>
-				Increased multiplier but adds face card restriction.
+			Bigger multiplier but hates royalty. Peasant straights only.
 			</td>
 		</tr>
 		<tr>
@@ -74,12 +53,12 @@ Based on the Standard ruleset, with the following changes:
 			</td>
 			<td>
 				<div className={'flex flex-col gap-1'}>
-					<span><Xmult>X6</Xmult> Mult every <Hands>4</Hands> hands played with selected hand type</span>
-					<span>Hand type selected upon purchase</span>
+					<span><Xmult>X6</Xmult> Mult every <Hands>4</Hands> hands played with selected hand</span>
+					<span>Hand randomized upon purchase</span>
 				</div>
 			</td>
 			<td>
-				More powerful but restricted to a specific poker hand type.
+			Monogamous with one hand type. Loyalty pays better than optimization ever did.
 			</td>
 		</tr>
 		<tr>
@@ -98,7 +77,7 @@ Based on the Standard ruleset, with the following changes:
 				</div>
 			</td>
 			<td>
-				Higher risk/reward with visible value and potential for negative mult.
+			One roll of the dice when you buy it. At least you know what disappointment you're getting.
 			</td>
 		</tr>
 		<tr>
@@ -108,18 +87,18 @@ Based on the Standard ruleset, with the following changes:
 			</td>
 			<td>
 				<div className={'flex flex-col gap-1'}>
-					<span>This Joker gains <Chips>+3</Chips> Chips per discarded card of suit</span>
+					<span>Gains <Chips>+3</Chips> Chips per discarded card of suit</span>
 					<span>Suit changes every round</span>
 				</div>
 			</td>
 			<td>
 				<div className={'flex flex-col gap-1'}>
-					<span>This Joker gains <Chips>+10</Chips> Chips per discarded card of suit</span>
-					<span>Suit <Hands>never changes</Hands></span>
+					<span>Gains <Chips>+10</Chips> Chips per discarded card of its suit</span>
+					<span>Suit <Hands>locked</Hands> on purchase</span>
 				</div>
 			</td>
 			<td>
-				More consistent with fixed suit and higher scaling per discard.
+			Monogamous with its suit. Till death do you part.
 			</td>
 		</tr>
 		<tr>
@@ -140,7 +119,7 @@ Based on the Standard ruleset, with the following changes:
 				</div>
 			</td>
 			<td>
-				More consistent with fixed rank and increased payout.
+			One rank, forever. Pick your income stream and commit.
 			</td>
 		</tr>
 		<tr>
@@ -158,11 +137,11 @@ Based on the Standard ruleset, with the following changes:
 				<div className={'flex flex-col gap-1'}>
 					<span>This Joker gains <Chips>+8</Chips> Chips if played hand has exactly <Hands>4</Hands> cards</span>
 					<span>Starts with <Chips>64</Chips> Chips</span>
-					<span>Chips only apply when played hand has exactly <Hands>4</Hands> cards</span>
+					<span><Mult>Only applies with 4-card hands</Mult></span>
 				</div>
 			</td>
 			<td>
-				Double scaling rate with significant starting value, but chips only count when condition is met.
+			Actually good now but ONLY with 4-card hands. No cheating.
 			</td>
 		</tr>
 		<tr>
@@ -181,7 +160,7 @@ Based on the Standard ruleset, with the following changes:
 				</div>
 			</td>
 			<td>
-				Adds momentum mechanic that rewards consecutive skips.
+			Momentum mechanic - keep skipping or watch it crumble.
 			</td>
 		</tr>
 		<tr>
@@ -197,13 +176,13 @@ Based on the Standard ruleset, with the following changes:
 			</td>
 			<td>
 				<div className={'flex flex-col gap-1'}>
-					<span>This Joker gains <Xmult>X0.2</Xmult> Mult per scoring <Hands>Enhanced card</Hands> played</span>
-					<span>Transforms played card into <Hands>Stone</Hands></span>
-					<span>Played stone cards give <Money>$3</Money></span>
+					<span>Gains <Xmult>X0.2</Xmult> Mult per scoring <Hands>Enhanced card</Hands> played</span>
+					<span>Played enhanced cards transform into <Hands>Stone</Hands></span>
+					<span>Stone cards give <Money>$3</Money> when played</span>
 				</div>
 			</td>
 			<td>
-				Double scaling with added economy through stone card conversion.
+			Turns your enhancements into a stone economy. Vampire economist arc.
 			</td>
 		</tr>
 		<tr>
@@ -220,7 +199,7 @@ Based on the Standard ruleset, with the following changes:
 				<Hands>Steel cards</Hands> are <Hands>retriggered</Hands> when played
 			</td>
 			<td>
-				Complete mechanical rework focusing on retriggers instead of passive mult scaling.
+			From passive multiplier to active retrigger engine.
 			</td>
 		</tr>
 		<tr>
@@ -236,12 +215,10 @@ Based on the Standard ruleset, with the following changes:
 			<td>
 				<div className={'flex flex-col gap-1'}>
 					<span><Hands>Uncommon</Hands> Jokers each give <Xmult>X2</Xmult> Mult</span>
-					<span className={'text-xs'}>SPORTS CARD "CONTROVERSY"</span>
-					<span className={'text-xs'}>DISGUISED AS BALANCE CHANGE!!!</span>
 				</div>
 			</td>
 			<td>
-				Community retcon
+			The change that broke the server. If you know, you know.
 			</td>
 		</tr>
 		<tr>
@@ -257,16 +234,35 @@ Based on the Standard ruleset, with the following changes:
 			</td>
 			<td>
 				<div className={'flex flex-col gap-1'}>
-					<span>On start of game, randomly picks one of three idol variants to add to pool:</span>
-					<span><Hands>The Zealot Idol:</Hands> Each played <Hands>Rank</Hands> gives <Xmult>X1.5</Xmult> Mult when scored (rank changes each round)</span>
-					<span><Hands>The Idol of Abstinence:</Hands> Each played <Hands>Rank</Hands> of <Hands>Suit</Hands> gives <Xmult>X1</Xmult> Mult when scored. Gains <Xmult>X0.5</Xmult> Mult each round. Resets to <Xmult>X1</Xmult> when played.</span>
-					<span><Hands>The Hoarder's Idol:</Hands> Most common card in deck gives <Xmult>X(1 + 0.05 per card)</Xmult> Mult when scored</span>
+				One of three variants added to joker pool at game start - Zealot (<Mult>X1.5</Mult> per rank), Abstinence (builds Mult between plays), Hoarder (rewards card hoarding).
 				</div>
 			</td>
 			<td>
-				Split into three variants with different mechanics.
+			Split into three jealous gods. They don't play nice together.
 			</td>
 		</tr>
+		<tr>
+			<td>
+				#### Hit the Road [toc]
+				<JokerCard name={'Hit the Road'} img={'/cards/j_hit_the_road.png'}/>
+			</td>
+			<td>
+				<div className={'flex flex-col gap-1'}>
+					<span>Gains <Xmult>X0.5</Xmult> Mult for every <Hands>Jack</Hands> discarded this round</span>
+					<span>Resets each round</span>
+				</div>
+			</td>
+			<td>
+				<div className={'flex flex-col gap-1'}>
+					<span>Gains <Xmult>X0.75</Xmult> Mult for every <Hands>Jack</Hands> discarded</span>
+					<span>Discarded Jacks are <Hands>destroyed</Hands></span>
+					<span>Mult gain is permanent</span>
+				</div>
+			</td>
+			<td>
+				Permanent scaling but Jacks never come back.
+			</td>
+</tr>
 		</tbody>
 	</table>
 </div>
@@ -303,7 +299,7 @@ Based on the Standard ruleset, with the following changes:
 				</div>
 			</td>
 			<td>
-				Removes the permanent hand size penalty but destroys cards before conversion.
+			Permanent hand size penalty killed this card. Now it's Immolate's chaotic cousin.
 			</td>
 		</tr>
 		<tr>
@@ -325,7 +321,7 @@ Based on the Standard ruleset, with the following changes:
 				</div>
 			</td>
 			<td>
-				Penalty is randomized but no longer stacks, making it more predictable for multiple uses.
+			Fixed cost ceiling means you can actually use this repeatedly. RNG penalty type keeps it spicy.
 			</td>
 		</tr>
 		</tbody>
@@ -333,34 +329,39 @@ Based on the Standard ruleset, with the following changes:
 </div>
 
 ## Tags
-
-- **Juggler Tag:** [Details to be added]
-- **Investment Tag:** [Details to be added]
-
+- **Juggle Tag**: +1 hand size next PvP Blind (changed from affecting next blind to specifically targeting PvP blinds)
+- **Investment Tag**: After defeating Boss Blind, gain $5 + $10 per completed Ante (scales with progression instead of flat $25)
 ## Glass Cards
 
-Justice Tarot card is re-enabled in this ruleset. Glass cards now break at **1/3 rate** (1 in 12 chance instead of 1 in 4).
+Justice is back in the Tarot pool. Glass cards now break at **1/3 rate** (1 in 12 chance instead of 1 in 4).
 
 ## Stakes
 
-Adds three new Stakes [Details to be added]
+## Stakes
+
+Sandbox runs a custom stake rotation designed for cleaner difficulty progression.
+
+**Available Stakes:**
+- **White Stake** - Base game
+- **Black Stake** - Same as vanilla (Shop can have Eternal jokers)
+- **Planet Stake** - Black Stake + Perishable jokers in shop + faster score scaling each Ante (like Purple Stake but keeps your discards)
+- **Spectral Stake** - Planet Stake + Rental jokers in shop + even faster score scaling (higher scaling than any vanilla stake)
+- **Spectral+ Stake** - Spectral Stake + extreme score scaling (the "how far can you push it" stake)
+
+**Design Notes:**
+This progression spreads joker stickers across multiple difficulties instead of cramming Perishable and Rental together on Gold Stake. Each tier introduces exactly one sticker type (Eternal → Perishable → Rental) paired with increasingly aggressive ante scaling. The discard reduction from vanilla Blue Stake is removed entirely. The result: a smoother difficulty curve where each stake feels distinct without relying on annoyance mechanics.
 
 ## Multiplayer Jokers
 
-All multiplayer jokers from the Standard ruleset are included and available in Sandbox mode. See [Standard ruleset](/docs/rulesets/standard#multiplayer-jokers) for details.
+All multiplayer jokers from the Standard ruleset are included and available in Sandbox. See [Standard ruleset](/docs/rulesets/standard#multiplayer-jokers) for details.
 
 <Callout>
-	These jokers can be removed by unchecking the **"Enable Multiplayer Cards"** option in the lobby options.
+    ## Why These Changes?
+
+Score preview disabled - removes calculation paralysis and speeds up play. Spectral cards improved - predictable cost ceilings instead of run-ending spirals.
+Ouija destroys cards instead of hand size. Ectoplasm plateaus at three uses. Loyalty Card kills cross-blind busywork. Every change turns "mathematically correct but boring" into "risky but interesting." The goal: eliminate optimization homework that doesn't create meaningful decisions.
+Changes rotate based on what creates variety between runs. If it makes you approach the game differently, it stays. If it just makes you count more cards for the same outcome, it goes.
+
 </Callout>
 
-## Rationale
-
-The Sandbox ruleset serves as a testing ground for potential balance changes before they're considered for Standard play. Changes focus on:
-
-- **Increased build diversity:** Modifications to underused jokers to make them more competitive
-- **Risk/reward balance:** Adjustments to cards with high variance or inconsistent effects
-- **Consistency improvements:** Removing RNG elements that change every round (Castle, Mail-in Rebate)
-- **Mechanical experimentation:** Testing new interactions (Steel Joker retriggers, Vampire stone conversion)
-- **Power level adjustments:** Buffing weak cards while adding restrictions to powerful ones
-
-Changes are regularly rotated and refined based on playtesting feedback. Successful modifications may eventually be promoted to the Standard ruleset.
+---
