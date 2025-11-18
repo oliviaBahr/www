@@ -5,9 +5,7 @@ description: Experimental ruleset for testing balance changes and new mechanics
 
 ## Overview
 
-Sandbox tests mechanical changes that reshape how you approach the game. Targeted modifications to underperforming jokers and systemic adjustments that force different strategic choices. Score preview disabled. Three experimental stakes. Every change earned its spot by creating new decision spaces, not just different numbers.
-
-Based on the Standard ruleset, with the following changes:
+Sandbox tests mechanical changes that reshape how you approach the game. Score preview disabled. Modified jokers force different strategic choices. Three experimental stakes. Changes based on Standard ruleset.
 
 ## Gameplay Changes
 
@@ -337,31 +335,33 @@ Justice is back in the Tarot pool. Glass cards now break at **1/3 rate** (1 in 1
 
 ## Stakes
 
-## Stakes
-
 Sandbox runs a custom stake rotation designed for cleaner difficulty progression.
 
 **Available Stakes:**
-- **White Stake** - Base game
-- **Black Stake** - Same as vanilla (Shop can have Eternal jokers)
-- **Planet Stake** - Black Stake + Perishable jokers in shop + faster score scaling each Ante (like Purple Stake but keeps your discards)
-- **Spectral Stake** - Planet Stake + Rental jokers in shop + even faster score scaling (higher scaling than any vanilla stake)
-- **Spectral+ Stake** - Spectral Stake + extreme score scaling (the "how far can you push it" stake)
+- **White Stake** - Base difficulty
+- **Black Stake** - Shop can have Eternal Jokers
+- **Planet Stake** (NEW) - Applies Black Stake effects, plus:
+  - Shop can have Perishable Jokers (debuffed after 5 Rounds)
+  - Required score scales faster for each Ante
+- **Spectral Stake** (NEW) - Applies Planet Stake effects, plus:
+  - Rental Jokers appear in shop
+  - Required score scales faster for each Ante (cumulative with Planet)
+- **Spectral+ Stake** (NEW) - Applies Spectral Stake effects, plus:
+  - Required score scales even faster for each Ante
 
 **Design Notes:**
-This progression spreads joker stickers across multiple difficulties instead of cramming Perishable and Rental together on Gold Stake. Each tier introduces exactly one sticker type (Eternal → Perishable → Rental) paired with increasingly aggressive ante scaling. The discard reduction from vanilla Blue Stake is removed entirely. The result: a smoother difficulty curve where each stake feels distinct without relying on annoyance mechanics.
+Each stake introduces one sticker type (Eternal → Perishable → Rental) with increasingly aggressive ante scaling. Discard reduction from vanilla Blue Stake removed entirely.
 
 ## Multiplayer Jokers
 
 All multiplayer jokers from the Standard ruleset are included and available in Sandbox. See [Standard ruleset](/docs/rulesets/standard#multiplayer-jokers) for details.
 
 <Callout>
-    ## Why These Changes?
+## Why These Changes?
 
-Score preview disabled - removes calculation paralysis and speeds up play. Spectral cards improved - predictable cost ceilings instead of run-ending spirals.
-Ouija destroys cards instead of hand size. Ectoplasm plateaus at three uses. Loyalty Card kills cross-blind busywork. Every change turns "mathematically correct but boring" into "risky but interesting." The goal: eliminate optimization homework that doesn't create meaningful decisions.
-Changes rotate based on what creates variety between runs. If it makes you approach the game differently, it stays. If it just makes you count more cards for the same outcome, it goes.
+Balatro's single-player balance creates optimization-heavy competitive play where players calculate through 5-second score previews. Sandbox rebalances around faster decisions and strategic variety.
 
+Score preview removal forces pattern recognition over arithmetic. Modified jokers create new constraints - Castle locks to one suit, Loyalty Card demands hand monogamy, Hit the Road permanently destroys Jacks. Spectral card changes remove permanent penalties that made cards like Ouija and Ectoplasm unplayable. Stakes progression separates sticker types across difficulties instead of stacking them on Gold Stake.
 </Callout>
 
 ---
